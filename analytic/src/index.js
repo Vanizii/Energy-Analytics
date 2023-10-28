@@ -17,6 +17,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import Toolbar from '@mui/material/Toolbar';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 
 // Icons
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -31,10 +34,35 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// Funktionale Komponente für die Karte
+function MyCard(props) {
+
+  const { wert, text, veraenderung } = props;
+
+  return (
+    <Card>
+      <CardContent>
+        <Typography variant="h5" component="div">
+          {wert}
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        {text}
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        {veraenderung}
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+}
+
 class Homepage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      energieverbrauch: "2 kWh/m²a",
+      eneregieersparnis: "8 kWh/m²",
+      geldersparnis: 243};
   }
 
   drawer = () => {
@@ -77,6 +105,7 @@ class Homepage extends React.Component {
     )
   };
 
+  // HTML Rendern
   render() {
     return (
       <div>
@@ -99,6 +128,9 @@ class Homepage extends React.Component {
             <div class="energieverbrauch">2 kWh/m2a</div>
             <div class="energieersparnis">8 kWh/m2a</div>
             <div class="Geldersparnis">243</div>
+            <div>
+            <MyCard wert="Karte 1" text="Inhalt für Karte 1" veraenderung="200" />
+            </div>
           </div>
 
           <div class="diagramme">
