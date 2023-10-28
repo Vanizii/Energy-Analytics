@@ -1,0 +1,81 @@
+#include <WiFi.h>
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BME680.h>
+
+const char* ssid = "Honor"; // WLAN-Netzwerkname
+const char* password = "CaroNet4";
+
+// Webserver-Informationen
+const char* serverAddress = "http://127.0.0.1:5500/Webapp.html"; // Adresse des Zielservers
+const int serverPort = 5500; // Port für die HTTP-Anfrage
+const String url = "/sensor-data"; // Endpunkt auf dem Webserver
+
+const int sda = 21; // Pin für die Messdaten (I2C)
+const int scl = 22; // Pin für die Taktrate (I2C)
+
+Adafruit_BME680 bme;
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  Serial.println("\n\nBME680 Daten senden\n");
+
+  Wire.begin(sda, scl);
+
+  if (!bme.begin()) {
+    Serial.println("Kann keinen BME680 Sensor finden. Ende.");
+    while (1);
+  }
+  Serial.println("BME680 Sensor gefunden");
+  bme.setTemperatureOversampling(BME680_OS_8X);
+  bme.setHumidityOversampling(BME680_OS_2X);
+
+  // WLAN-Verbindung herstellen
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.println("Verbindung zum WLAN-Netzwerk wird hergestellt...");
+  }
+  Serial.println("Erfolgreich mit WLAN verbunden");
+}
+
+void loop() {
+  float humidity = bme.readHumidity();
+  float temperature = bme.readTemperature();
+
+  // Daten an den Webserver senden
+  sendDataToServer(humidity, temperature);
+
+  delay(5000); // Warten Sie 5 Sekunden, bevor Sie die nächsten Daten senden
+}
+
+void sendDataToServer(float humidity, float temperature) {
+  WiFiClient client;
+
+  Serial.println("Verbindung zum Webserver wird gleich hergestellt");
+  // Verbindung zum Webserver herstellen
+  if (client.connect(serverAddress, serverPort)) {
+    // HTTP-Anfrage erstellen und Daten senden
+    String postData = "humidity=" + String(humidity) + "&temperature=" + String(temperature);
+    String request = "POST " + url + " HTTP/1.1\r\n";
+    request += "Host: " + String(serverAddress) + "\r\n";
+    request += "Content-Type: application/x-www-form-urlencoded\r\n";
+    request += "Content-Length: " + String(postData.length()) + "\r\n\r\n";
+    request += postData;
+
+    // Anfrage an den Server senden
+    client.print(request);
+    delay(500); // Warten Sie einen Moment für die Antwort
+
+    // Antwort vom Server anzeigen
+    while (client.available()) {
+      char c = client.read();
+      Serial.print(c);
+    }
+
+    client.stop(); // Verbindung schließen
+  } else {
+    Serial.println("Verbindung zum Webserver fehlgeschlagen");
+  }
+}
