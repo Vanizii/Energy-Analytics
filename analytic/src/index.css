@@ -14,12 +14,12 @@ code {
 
 .uebersicht {
   display: flex;
-  background-color: DodgerBlue;
-  justify-content: space-between;
+  /*background-color: rgb(230, 230, 230);*/
+  /*justify-content: space-between;*/
 }
 
 .uebersicht> div {
-  background-color: #f1f1f1;
+  /*background-color: #ffffff;*/
   margin: 10px;
   padding: 20px;
   font-size: 30px;

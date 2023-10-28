@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Button from '@mui/material/Button';
 
+import logo from './logo.svg';
+
 // Eventuel zu viel
 
 import Divider from '@mui/material/Divider';
@@ -20,6 +22,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { Bar, Line } from 'react-chartjs-2';
 
 // Icons
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -31,6 +34,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 
 import ChatIcon from '@mui/icons-material/Chat';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Chart } from 'chart.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -40,15 +44,15 @@ function MyCard(props) {
   const { wert, text, veraenderung } = props;
 
   return (
-    <Card>
+    <Card sx={{ backgroundColor: '#ffffff', width: 300, height: 140 }}>
       <CardContent>
-        <Typography variant="h5" component="div">
+        <Typography variant="h5" component="div" sx={{ mb: 1.5, fontSize: '28px', fontWeight: 'bold' }}>
           {wert}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
         {text}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        <Typography sx={{ mb: 1.5, color: '#4889d7', fontSize: '12px' }} color="text.secondary">
         {veraenderung}
         </Typography>
       </CardContent>
@@ -121,16 +125,13 @@ class Homepage extends React.Component {
 
         <div style={{ marginLeft: '220px' }}>
           <h1>Wilkommen zurück, Marie</h1>
-          <h2>Hier sind die wichtigstens Informationen übers Nachhaltigkeitsgymnasium</h2>
-          <Button variant="contained">Contained</Button>
+          <p style={{ mb: 1.5, color: '#4889d7', }}>Hier sind die wichtigstens Informationen übers Nachhaltigkeitsgymnasium</p>
+          
 
           <div class="uebersicht">
-            <div class="energieverbrauch">2 kWh/m2a</div>
-            <div class="energieersparnis">8 kWh/m2a</div>
-            <div class="Geldersparnis">243</div>
-            <div>
-            <MyCard wert="Karte 1" text="Inhalt für Karte 1" veraenderung="200" />
-            </div>
+            <MyCard wert="2 kWh/m²*a" text="Energieverbrauch" veraenderung="10.2 +1.01% diese Woche" />
+            <MyCard wert="8 kWh/m²" text="Energiersparnis" veraenderung="3.1 +0.49% dieses Jahr" />
+            <MyCard wert="243" text="Geldersparnis" veraenderung="2.56 +9,5% dieses Jahr" />
           </div>
 
           <div class="diagramme">
@@ -142,6 +143,8 @@ class Homepage extends React.Component {
           <div class="historie">
             <div>Historie</div>
           </div>
+          <Button variant="contained">Contained</Button>
+          
         </div>
       </div>
     );
