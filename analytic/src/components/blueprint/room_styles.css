@@ -1,0 +1,37 @@
+:root {
+    --15-temp : #2222ee99;
+    --16-temp : #2255ee99;
+    --17-temp : #2288ee99;
+    --18-temp : #66ccee99;
+    --19-temp : #22ee8899;
+    --20-temp : #eeee2299;
+    --21-temp : #ee662299;
+    --22-temp : #fe442299;
+    --23-temp : #ff111199;
+    --24-temp : #ff228899;
+    --na-temp : #dddddd99;
+}
+
+.room {
+    fill : var(--na-temp);
+    position: relative;
+    z-index: 1;
+}
+
+.t15 { fill : var(--15-temp); }
+.t16 { fill : var(--16-temp); }
+.t17 { fill : var(--17-temp); }
+.t18 { fill : var(--18-temp); }
+.t19 { fill : var(--19-temp); }
+.t20 { fill : var(--20-temp); }
+.t21 { fill : var(--21-temp); }
+.t22 { fill : var(--22-temp); }
+.t23 { fill : var(--23-temp); }
+.t24 { fill : var(--24-temp); }
+
+
+.room:hover {
+    stroke : red;
+    stroke-width : 10px;
+    z-index: 3000;
+}
