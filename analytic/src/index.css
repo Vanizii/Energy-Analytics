@@ -54,3 +54,9 @@ code {
   padding: 20px;
   font-size: 30px;
 }
+
+.sidebar {
+  width: 250px; /* Breite der Sidebar anpassen */
+  background-color: #852121;
+  padding: 15px;
+}
