@@ -1,0 +1,40 @@
+Unser Produkt besteht aus einer Webseite, welche mit einem ESP32 kommuniziert. 
+Der ESP32 ist ein Mikrocontroller, welcher von Sensoren zum Messdaten der Temperaturen und Raumfeuchtigkeit erhält. 
+Anhand der gemessenen Daten und zeitlicher Regelung werden die Ressourcen (Heizung, Belüftung, Licht) der Schule automatisch eingesetzt.
+
+Die Webanwendung enthält 5 Unterseiten. Darunter:
+-Dashboard
+-Gebäude
+-Räume
+-Nutzer
+-Settings
+
+Das Dashboard zeigt:
+-den Energieverbrauch der aktuellen Woche
+-die Energieersparnis des aktuellen Jahres
+-das Geldersparnis des aktuellen Jahres
+-eine Historie, des Energieverbrauchs als Diagramm
+-Jahresziele als Diagramm
+-Zusammengeafasste Historie in Tabellenformat
+
+Unter dem Punkt Gebäude ist ein Grundriss der vorhandenen Stockwerke der Gebäude zu sehen. 
+
+Jeder Raum wird mit seiner aktuellen Temperatur angegeben. farblich hervorgehoben durch eine Farbskala (15°C dunkelblau bis 24°C magenta). 
+Mit einem Klick auf einen Raum werden mehr Details über diesen angezeigt:
+-aktuelle Humidität
+-Energieverbrauch der aktuellen Woche
+-Temperatur
+-Status der Klimaanlage
+-Status der Beleuchtung
+-Status der Heizung
+
+Die drei letzten Details können auch manuell über die Webanwendung gesteuert werden kann.
+
+Dabei werden für jeden Raum die aktuellen Temperaturen, 
+sowie ihr Besetzungsstatus (aktuell belegt oder frei), Lichtstatus, Belüftungsstatus und ob die Fenster geöffnet sind unter weitere Details zu sehen.
+Man kann auf einzelne Räume klicken um weitere Details zu erhalten. Auch der geplante wöchentliche Unterricht für die Räume ist dort zu sehen. 
+Dieser Plan passt sisch dynamisch auf veränderungen wie Räumänderung und Ausfall an. In diesem Fall wird der Raum nicht für diese Zeit versorgt 
+(dh. Licht und Heizung bleiben aus).
+
+
+Nutzer
