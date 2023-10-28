@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Button from '@mui/material/Button';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -19,6 +20,14 @@ class Homepage extends React.Component
       <div>
         <h1>Wilkommen zurück, Marie</h1>
         <h2>Hier sind die wichtigstens Informationen übers Nachhaltigkeitsgymnasium</h2>
+        <Button variant="contained">Contained</Button>
+
+        <div class="uebersicht">
+          <div class="energieverbrauch">2 kWh/m2a</div>
+          <div class="energieersparnis">8 kWh/m2a</div>
+          <div class="Geldersparnis">243</div>
+        </div>
+
       </div>
     );
   }
