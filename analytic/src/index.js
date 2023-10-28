@@ -5,9 +5,28 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class Homepage extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Wilkommen zurück, Marie</h1>
+        <h2>Hier sind die wichtigstens Informationen übers Nachhaltigkeitsgymnasium</h2>
+      </div>
+    );
+  }
+
+}
 root.render(
   <React.StrictMode>
-    <App />
+    <Homepage />
   </React.StrictMode>
 );
 
