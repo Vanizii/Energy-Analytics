@@ -28,6 +28,16 @@ class Homepage extends React.Component
           <div class="Geldersparnis">243</div>
         </div>
 
+        <div class="diagramme">
+          <div class="energieverbrauchGrafik">2 kWh/m2a</div>
+          <div class="jahresziele">8 kWh/m2a</div>
+        </div>
+
+
+        <div class="historie">
+          <div>Historie</div>
+        </div>
+
       </div>
     );
   }

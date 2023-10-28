@@ -15,9 +15,40 @@ code {
 .uebersicht {
   display: flex;
   background-color: DodgerBlue;
+  justify-content: space-between;
 }
 
 .uebersicht> div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.diagramme
+{
+  display: flex;
+  background-color: DodgerBlue;
+  justify-content: space-between;
+}
+
+.diagramme > div
+{
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.historie
+{
+  display: flex;
+  background-color: DodgerBlue;
+  justify-content: space-between;
+}
+
+.historie > div
+{
   background-color: #f1f1f1;
   margin: 10px;
   padding: 20px;
