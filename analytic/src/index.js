@@ -35,6 +35,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import ChatIcon from '@mui/icons-material/Chat';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Chart } from 'chart.js';
+import Layout from './components/layout/layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -69,64 +70,13 @@ class Homepage extends React.Component {
       geldersparnis: 243};
   }
 
-  drawer = () => {
-    return (
-      <div>
-        <Toolbar />
-        <Divider />
-        <List>
-          {[
-            { text: 'Dashboard', icon: <DashboardIcon /> },
-            { text: 'Grundriss', icon: <HomeIcon /> },
-            { text: 'Kalender', icon: <CalendarMonthIcon /> },
-            { text: 'Räume', icon: <SensorDoorIcon /> },
-            { text: 'Nutzer', icon: <PersonIcon /> },
-            { text: 'Settings', icon: <SettingsIcon /> },
-          ].map(({ text, icon }, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{icon}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {[
-            { text: 'Kontakt', icon: <ChatIcon /> },
-            { text: 'Logout', icon: <LogoutIcon /> },
-          ].map(({ text, icon }, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{icon}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </div>
-    )
-  };
+ 
 
   // HTML Rendern
   render() {
     return (
-      <div>
+      <Layout title="Willkommen zurück, marie">
 
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: "200px" },
-          }}
-          open
-        >{this.drawer()}</Drawer>
-
-        <div style={{ marginLeft: '220px' }}>
-          <h1>Wilkommen zurück, Marie</h1>
-          <p style={{ mb: 1.5, color: '#4889d7', }}>Hier sind die wichtigstens Informationen übers Nachhaltigkeitsgymnasium</p>
-          
 
           <div class="uebersicht">
             <MyCard wert="2 kWh/m²*a" text="Energieverbrauch" veraenderung="10.2 +1.01% diese Woche" />
@@ -145,8 +95,7 @@ class Homepage extends React.Component {
           </div>
           <Button variant="contained">Contained</Button>
           
-        </div>
-      </div>
+      </Layout>
     );
   }
 
