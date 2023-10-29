@@ -1,5 +1,6 @@
 # Energy-Analytics
-Hackathon Team 2023
+Hackathon Team 2023 - Challenge 3.
+Dashboard um Heizung, Belüftung, Beleuchtung und Stromverbrauch nach Bedarf zu steuern.
 
 # Sensoren - Caro und Vani
 Es wird ein ESP32 eingesetzt um die Luftfeuchtigkeit und die Raumtemperatur zu messen.
