@@ -6,3 +6,4 @@
 Wir benutzen einen Microcontroller zum Steuern eines Temperatur- und Feuchtigkeitssensors. Die Messdaten werden an den Controller gesendet und dieser sendet wiederum per WiFi an den Webserver.
 
 **Arduino externe Webseite V4.ino:** Der finale Code mit Sensormessung und dynamischem Updaten der Daten auf dem Webserver 
+**web externe webseite V3.html:** Webseitenprototyp zum Anzeigen der übertragenen Sensordaten
