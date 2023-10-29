@@ -4,26 +4,26 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME680.h>
 
-const char* ssid = "ssid";
-const char* password = "password";
-const String serverAddress = "http://192.168.0.227:3000";  // Die Basis-URL, die Sie aufrufen möchten
+const char* ssid = "ssid";  // Der Name Ihres WLAN-Netzwerks
+const char* password = "password";  // Das WLAN-Passwort
+const String serverAddress = "http://192.168.0.227:3000";  // Die Basis-URL, zu der Daten gesendet werden
 
 const int sda = 21;   // Pin für die Messdaten (I2C)
 const int scl = 22;   // Pin für die Taktrate (I2C)
 Adafruit_BME680 bme;  // Erstellt ein Objekt für den BME680-Sensor
 
 void setup() {
-  Serial.begin(115200);        // Initialisieren der seriellen Kommunikation mit einer Baudrate von 115200
-  WiFi.begin(ssid, password);  // Verbindung zum WLAN herstellen
+  Serial.begin(115200);        // Initialisiert die serielle Kommunikation mit einer Baudrate von 115200
+  WiFi.begin(ssid, password);  // Stellt eine Verbindung zum WLAN her
 
   // I2C-Kommunikation mit den Pins sda und scl einstellen
   Wire.begin(sda, scl);
 
-  // BME680-Sensor initialisieren, prüfen, ob er gefunden wird
+  // BME680-Sensor initialisieren und überprüfen, ob er gefunden wird
   if (!bme.begin()) {
     Serial.printf("Kann keinen BME680-Sensor finden. Programm wird beendet.\n");
     while (1)
-      ;  // In Endlosschleife bleiben
+      ;  // In einer Endlosschleife verharren
   }
   Serial.printf("BME680-Sensor gefunden\n");
 
@@ -35,16 +35,9 @@ void setup() {
 }
 
 void loop() {
-  /*
-  float humidity = 50.0; // Beispielwert für die Luftfeuchtigkeit
-  float temperature = 25.0; // Beispielwert für die Temperatur
-*/
-
+  // Luftfeuchtigkeit und Temperatur vom BME680-Sensor lesen
   float humidity = bme.setTemperatureOversampling(BME680_OS_8X);
   float temperature = bme.setHumidityOversampling(BME680_OS_2X);
-
-  Serial.println(humidity);
-  Serial.println(temperature);
 
   // Die Ziel-URL für die HTTP-GET-Anfrage erstellen, wobei die Werte der Luftfeuchtigkeit und Temperatur in der URL festgelegt sind
   String targetUrl = "http://192.168.0.227:3000/sensor-data?humidity=";
