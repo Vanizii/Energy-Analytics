@@ -1,0 +1,10 @@
+.ANCard:default {
+    transition: 500ms;
+}
+
+.ANCard:hover {
+    transform : translate(-1px,-7px);
+    background-color: #ddddff;
+    transition: 500ms;
+    color: #111144
+}

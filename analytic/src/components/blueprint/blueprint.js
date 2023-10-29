@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+
 import Room from './room';
+
 import fp_img from '../../assets/fp/std_fp.webp';
 
 class Blueprint extends Component {
@@ -24,11 +26,19 @@ class Blueprint extends Component {
 
     render() {
         return (
-            <div style={this.containerStyle}>
-                <svg width={this.canvasWidth} height={this.canvasHeight}>
-                    {this.rooms.map((room, index) => (<Room roomData={room} index={index}/>))}
-                </svg>
-            </div>
+            <>
+                <div style={{ marginLeft: '220px' }}>
+                    <h1>Heatmap</h1>
+                    <p style={{ mb: 1.5, color: '#4889d7', }}>Diese Räume sind zur Zeit beheizt</p>
+                </div>
+
+
+                <div style={this.containerStyle}>
+                    <svg width={this.canvasWidth} height={this.canvasHeight}>
+                        {this.rooms.map((room, index) => (<Room roomData={room} index={index}/>))}
+                    </svg>
+                </div>
+            </>
        );
     }
 }
