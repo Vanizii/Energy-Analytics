@@ -1,5 +1,5 @@
-Unser Produkt besteht aus einer Webseite, welche mit einem ESP32 kommuniziert. 
-Der ESP32 ist ein Mikrocontroller, welcher von Sensoren zum Messdaten der Temperaturen und Raumfeuchtigkeit erhält. 
+Unser Produkt besteht aus einer Webseite, die mit einem ESP32 kommuniziert. 
+Der ESP32 ist ein Mikrocontroller, der die Messdaten von Temperatur und Raumfeuchtigkeit über Sensorik ermittelt.
 Anhand der gemessenen Daten und zeitlicher Regelung werden die Ressourcen (Heizung, Belüftung, Licht) der Schule automatisch eingesetzt.
 
 Die Webanwendung enthält 5 Unterseiten. Darunter:
