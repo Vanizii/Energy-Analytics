@@ -1,4 +1,12 @@
 # Energy-Analytics
 Hackathon Team 2023
 
-Insgesamt handelt es sich um eine React-Anwendung zur Darstellung einer Grundrisskarte mit Räumen, die verschiedene Temperaturen aufweisen. Die Blueprint-Komponente stellt die Hauptansicht dar, während die Room-Komponente einzelne Räume auf der Karte darstellt und stylen kann. Die Verwendung von Tooltip und Icon-Elementen ermöglicht die Anzeige zusätzlicher Informationen beim Überfahren eines Raums mit der Maus.
+Die Webseite wird von der [index.js](analytics/src/index.js) aus gesteuert und geroutet.
+In /components sind alle Bausteine der Webseite gespeichert.
+Die komponente [/layout](analytic/src/components/layout) definiert das Grundgerüst, das auf allen Seiten gleich ist.
+Die anderen Komponenten sind eigene Seiten und werden in das Layout eingegossen:
+- [/dashboard](/analytic/src/components/dashboard) ist der Homescreen
+- [/blueprint](/analytic/src/components/blueprintf) der interaktive Grundruss
+- [/roomdetails](/analytic/src/components/roomdetails/) ist die Detailansicht der einzelnen Räume.
+
+der Ordner [/assets](/analytics/src/assets) enthält alle zusätzlichen Dateien und Bilder
