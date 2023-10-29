@@ -1,6 +1,6 @@
 # Sensoren - Caro und Vani
 
-Wir benutzen den ESP32 als Microcontroller und einen Temperatur/ Luftfeuchtigkeitssensor (BME680 Sensor) zur Messung von Temperatur und Luftfeuchtigkeit am Beispiel an einem einzelnen Raum. Der Sensor sendet die Messdaten zunächst an den ESP32, welcher als sich als Client mit der Webseite verbindet. Der Microcontroller sendet die Daten des Sensors über WiFi (Protokoll TCP) and den Webserver. Dort werden die Messdaten dann angezeigt. 
+Wir benutzen den ESP32 als Microcontroller und einen Temperatur/ Luftfeuchtigkeitssensor (BME680 Sensor) zur Messung. Der Sensor sendet die Messdaten zunächst an den ESP32, welcher als sich als Client mit der Webseite verbindet. Der Microcontroller sendet die Daten des Sensors über WiFi (Protokoll TCP) and den Webserver. Dort werden die Messdaten dann angezeigt. 
 
 Hardware
 ESP32 mit WiFi-Fähigkeiten
