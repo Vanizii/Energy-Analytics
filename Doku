@@ -30,11 +30,5 @@ Mit einem Klick auf einen Raum werden mehr Details über diesen angezeigt:
 
 Die drei letzten Details können auch manuell über die Webanwendung gesteuert werden kann.
 
-Dabei werden für jeden Raum die aktuellen Temperaturen, 
-sowie ihr Besetzungsstatus (aktuell belegt oder frei), Lichtstatus, Belüftungsstatus und ob die Fenster geöffnet sind unter weitere Details zu sehen.
-Man kann auf einzelne Räume klicken um weitere Details zu erhalten. Auch der geplante wöchentliche Unterricht für die Räume ist dort zu sehen. 
-Dieser Plan passt sisch dynamisch auf veränderungen wie Räumänderung und Ausfall an. In diesem Fall wird der Raum nicht für diese Zeit versorgt 
-(dh. Licht und Heizung bleiben aus).
-
-
-Nutzer
+Auch der geplante wöchentliche Unterricht für die Räume ist dort zu sehen. Dieser Plan passt sich dynamisch auf Veränderungen wie Räumänderung und Lehrerausfall an. 
+In diesem Fall wird der Raum nicht für diese Zeit versorgt (dh. Licht und Heizung bleiben aus).
