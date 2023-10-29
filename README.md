@@ -1,6 +1,10 @@
 # Sensoren - Caro und Vani
 
 # Dokumentation für das BME680 Sensor-Datenerfassungsprogramm
+
+![BME680](https://cdn-shop.adafruit.com/970x728/3660-08.jpg)
+![ESP32](https://media.elektor.de/media/catalog/product/cache/9cc822bfc6a57f9729d464b8b5e0e0df/j/o/joy-it-nodemcu-esp32-development-board.png)
+
 Einführung
 
 Dies ist eine Dokumentation für ein Arduino-Programm, das entwickelt wurde, um Daten von einem BME680-Sensor zu sammeln und sie an einen Server zu senden. Der BME680 ist ein Umweltsensor, der Luftqualitätsdaten wie Temperatur und Luftfeuchtigkeit misst. Das Programm verwendet eine ESP32-kompatible Mikrocontroller-Plattform, um die Daten über Wi-Fi an einen Server zu übertragen.
