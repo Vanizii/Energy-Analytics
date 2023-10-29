@@ -1,3 +1,7 @@
+Noitz zur Durchsicht:
+Die Website ist auf dem `Developer` Branch und die Sensorik auf dem `Sensoren` Branch.
+Der Branch `database-creation` muss nicht durchgesehen werden.
+
 # Energy-Analytics
 Hackathon Team 2023 - Challenge 3.
 Dashboard um Heizung, Belüftung, Beleuchtung und Stromverbrauch nach Bedarf zu steuern.
