@@ -18,6 +18,8 @@ import {std_fp, datelist} from '../../data';
 
 import DetailCard from './detailcard';
 
+// In der Datei wird die Unterseite Räume verwaltet
+
 ChartJS.register(
     LinearScale,
     CategoryScale,

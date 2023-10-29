@@ -21,7 +21,12 @@ import ChatIcon from '@mui/icons-material/Chat';
 import LogoutIcon from '@mui/icons-material/Logout';
 import logo from '../../assets/logo.png'
 
+// In dieser Datei befindet sich komponenten die zur Navigation verwendet werden
+
 function drawer() {
+
+    // Toolbar und Seitbar werden hinzugefügt
+    
     return (
         <div>
             <Toolbar className="logoBox">
