@@ -28,7 +28,7 @@ code {
 .diagramme
 {
   display: flex;
-  background-color: DodgerBlue;
+  /*background-color: DodgerBlue;*/
   justify-content: space-between;
 }
 
@@ -43,7 +43,7 @@ code {
 .historie
 {
   display: flex;
-  background-color: DodgerBlue;
+  /*background-color: DodgerBlue;*/
   justify-content: space-between;
 }
 
