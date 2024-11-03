@@ -24,3 +24,7 @@ Interaktive Gebäudeplan mit den gemessenen Temperatur und Feuchtigkeitswerten.
 
 **Raum**
 ![Raum](https://cdn.discordapp.com/attachments/852842409473081414/1168110861664129034/Dashboard_-_Raum.png?ex=65509303&is=653e1e03&hm=3f0534c4e7f389ba4d5f636e6d769844f68e72b12b1f53e7ce31a510d94585cc&)
+
+# Disclaimer
+Dieser Code wird „so wie er ist“ zur Verfügung gestellt, ohne jegliche Garantien oder Gewährleistungen. Die Verwendung erfolgt auf eigene Gefahr. Wir sind nicht verantwortlich für Probleme, Schäden oder Datenverluste, die sich aus der Verwendung dieses Repositorys ergeben können
+
